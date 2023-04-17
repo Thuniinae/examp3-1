@@ -1,17 +1,17 @@
 // template
 // CHENG-HAN YU
 // 2023/04/17
-
 #include <systemc>
 #include <iomanip> // for std::setw
-
-#include "testbench.h"
-#include "adder.h"
-#include"bus.h"
-
+#include "sysc/datatypes/fx/fx.h" // for sc_fixed
 using namespace std;
 using namespace sc_core; // for sc_start(), SC_MODULE, ...
 using namespace sc_dt; // for system-c datatypes
+
+#include"param.h"
+#include "testbench.h"
+#include "adder.h"
+
 
 
 int sc_main(int argc, char *argv[]){

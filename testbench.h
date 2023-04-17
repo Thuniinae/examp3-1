@@ -23,6 +23,7 @@ public:
     sc_in_clk clk;
 private:
     void source(void);
+    void sink(void);
     sc_ufixed_fast<32,10> _a, _b, _r;
 };
 
