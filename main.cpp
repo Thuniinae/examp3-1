@@ -23,6 +23,6 @@ int sc_main(int argc, char *argv[]){
     adder.clk(clk);
     tb.clk(clk);
     tb.initiator.i_skt(adder.t_skt);
-    sc_start(20, SC_NS);
+    sc_start(1, SC_SEC);
     return 0;
 }

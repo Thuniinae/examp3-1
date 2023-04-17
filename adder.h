@@ -37,14 +37,14 @@ void ADDER::my_thread(){
     bufferF[2] = a.read();
     for(int i = 0; i < 63; i++){
         _r = bufferF[2]*1/2 + bufferF[1]*1/3 + bufferF[0]*1/6;
-        wait(3, SC_NS);
+        //wait(3, SC_NS);
         s.write(_r);
         bufferF[0] = bufferF[2];
         bufferF[1] = a.read();
         bufferF[2] = a.read();
     }
     _r = bufferF[2]*1/2 + bufferF[1]*1/3 + bufferF[0]*1/6;
-    wait(3, SC_NS);
+    //wait(3, SC_NS);
     s.write(_r);
 }
 

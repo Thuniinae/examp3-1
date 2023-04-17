@@ -50,18 +50,18 @@ void TESTBENCH::source(){
     for (int i = 0; i < 128; i++){
         memcpy(buffer, &x_input_signal[i], 4);
         initiator.write_to_socket(ADDER_INPUT, NULL, buffer , 4);
-        wait();
+        //wait();
     }
 }
 
 void TESTBENCH::sink(){
     cout << "y_downsample_by2 = " << endl;
     for (int i = 0; i < 64; i++){
-        initiator.read_from_socket(ADDER_INPUT, NULL, buffer , 4);
+        initiator.read_from_socket(ADDER_OUTPUT, NULL, buffer , 4);
         memcpy(&_r, buffer, 4);
         //cout <<  i <<": ";
         printf("%.3f, ", (double)_r);
-        wait();
+        //wait();
     }
     cout << "\ntotal cycles: " ;
     cout << sc_time_stamp() <<  "/1ns" <<endl ;
