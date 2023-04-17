@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -Wall -rdynamic CMakeFiles/module.dir/main.cpp.o -o module  -Wl,-rpath,/opt/systemc/lib /opt/systemc/lib/libsystemc.so.2.3.3 
