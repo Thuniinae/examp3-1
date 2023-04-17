@@ -366,6 +366,7 @@ CMakeFiles/module.dir/main.cpp.o: ../main.cpp \
   /opt/systemc/include/sysc/datatypes/fx/sc_ufixed.h \
   /opt/systemc/include/sysc/datatypes/fx/sc_ufix.h \
   /opt/systemc/include/sysc/datatypes/fx/scfx_other_defs.h \
+  ../param.h \
   ../testbench.h \
   ../initiator.h \
   /opt/systemc/include/tlm \
@@ -418,7 +419,6 @@ CMakeFiles/module.dir/main.cpp.o: ../main.cpp \
   /opt/systemc/include/tlm_utils/simple_initiator_socket.h \
   /opt/systemc/include/tlm_utils/convenience_socket_bases.h \
   /opt/systemc/include/tlm_utils/tlm_quantumkeeper.h \
-  ../param.h \
   ../adder.h \
   /opt/systemc/include/tlm_utils/simple_target_socket.h \
   /opt/systemc/include/sysc/kernel/sc_dynamic_processes.h \
@@ -451,8 +451,6 @@ CMakeFiles/module.dir/main.cpp.o: ../main.cpp \
 /opt/systemc/include/tlm_utils/simple_target_socket.h:
 
 ../adder.h:
-
-../param.h:
 
 /opt/systemc/include/tlm_utils/tlm_quantumkeeper.h:
 
@@ -513,6 +511,8 @@ CMakeFiles/module.dir/main.cpp.o: ../main.cpp \
 ../initiator.h:
 
 ../testbench.h:
+
+../param.h:
 
 /opt/systemc/include/sysc/datatypes/fx/sc_ufix.h:
 

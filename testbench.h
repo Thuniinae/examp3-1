@@ -9,6 +9,12 @@ using namespace std;
 using namespace sc_core; 
 using namespace sc_dt; 
 
+union word {
+  int sint;
+  unsigned int uint;
+  unsigned char uc[4];
+};
+
 class TESTBENCH : public sc_module{
 public:
     SC_CTOR(TESTBENCH):initiator("initiator"){
@@ -28,21 +34,16 @@ private:
 };
 
 void TESTBENCH::source(){
-    word mask;
-    mask.uint = 0xffff;
     for (int i = 0; i < 128; i++){
-        initiator.write_to_socket(ADDER_INPUT, mask.uc, &x_input_signal[i] , 4);
+        initiator.write_to_socket(ADDER_INPUT, NULL, &x_input_signal[i] , 4);
         wait();
     }
 }
 
 void TESTBENCH::sink(){
-    word buffer;
-    word mask;
-    mask.uint = 0xffff;
     cout << "y_downsample_by2 = " << endl;
     for (int i = 0; i < 64; i++){
-        initiator.write_to_socket(ADDER_INPUT, mask.uc, &_r , 4);
+        initiator.write_to_socket(ADDER_INPUT, NULL, &_r , 4);
         //cout <<  i <<": ";
         printf("%.3f, ", (double)_r);
         wait();
